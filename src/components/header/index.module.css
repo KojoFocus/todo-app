@@ -1,0 +1,16 @@
+.headerBackground{
+
+    
+height: 40vh;
+margin: 10px 10px 0 10px;
+border-radius: 10px;
+background-position: center;
+background-image: linear-gradient(90deg, rgba(131,13,166,0.5074404761904762) 16%, rgba(20,117,217,0.6026785714285714) 100%, rgba(0,212,255,1) 100%), url(../../images/backgroundImage.jpg) 
+}
+
+.headerH1 {
+    margin: 30 auto 0 auto;
+    width: 70;
+    padding-top: 25px;
+    padding-left: 20%;
+}
