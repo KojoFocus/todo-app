@@ -1,14 +1,29 @@
-import React from "react";
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 
 function CreateTodo() {
-    const [todo, setTodo]= React.useState("");
+    
+    let todo;
+
+    function collectInput(event){
+       todo= event.target.value;
+        }
+
+        function saveTodo(){
+            // get existingblist of todos from local storage
+            let todos = JSON.parse(localStorage.getItem("TODO_KEY")) || [];
+            // Add new todo to existing list of todos
+            todos.push(todo);
+            // set all todos in local storage
+            localStorage.setItem("TODO_KEY",JSON.stringify(todos));
+             }
 
     return (
         <section className ={styles.createTodoSection}>
-            <input onChange={function(event){ console.log(event.target.value);}} className= {styles.createTodoInput} placeholder=" start typing..."/>
-            <button>Create</button>
-        {/* <p>Create Todo</p> */}
+            <input 
+                onChange= {collectInput}
+                 className= {styles.createTodoInput} 
+                 placeholder=" start typing..."/>
+            <button onClick={saveTodo}  >Create</button>
         </section>
     )
 }

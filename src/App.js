@@ -8,7 +8,7 @@ function App() {
    <React.Fragment>
     <Header />
     <CreateTodo />
-    <TodoList/>
+    <TodoList />
    </React.Fragment>
 
   );
