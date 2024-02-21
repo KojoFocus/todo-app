@@ -6,16 +6,23 @@ function TodoList() {
 
     // let todos = [];
     const [todos, setTodos] = useLocalStorage("TODO_KEY", []);
-
+    
     
 
     return (
-        <ul className= "list-group">
+       <section>
+        <button
+    className="btn btn-danger"
+    onClick= {()=> setTodos([])}>Clear todos</button>
+
+         <ul className= "list-group">
             {todos.map(function (todo, index)  {
                 return <TodoItem todo= {todo} index= {index}/>
             })}
         </ul>
+        </section>
     );
+      
 }
 
 export default TodoList;

@@ -10,6 +10,8 @@ function TodoItem({index, todo}) {
                         className="form-check-lablel"
                         for={index}
                     >{todo}</label>
+                    {/*take home assignment: implement single delete */}
+                    <button className= "btn btn-danger">delete</button>
                    </li>
                 
             );}
